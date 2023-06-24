@@ -1,0 +1,43 @@
+// Criar um objeto para armazenar os itens por categoria
+var listaDeCompras = {
+    frutas: [],
+    laticinios:[],
+    congelados: [],
+    doces: []
+};
+
+// Função para adicionar um item à Lists de compras 
+function adicionarItem() {
+    var resposta = prompt("Deseja adicionar um item à lista de compras? (sim/não)");
+     if (resposta.toLowerCase() === "sim") {
+        listaDeCompras.frutas.push(comida);
+     } else if (categoria.toLowerCase() === "Laticínios") {
+        listaDeCompras.laticinios.push(comida);
+     } else if (categoria.toLowerCase() === "congelados") {
+       listaDeCompras.congelados.push(comida);
+     }  else if (categoria.toLoweCase() === "doces") {
+        listaDeCompras.doces.push(comida);
+     }
+
+
+adicionarItem(); // Chama recursivamente a função para adicionar mais itens 
+ {
+    exibirlista(); // Chama a função para exibir a lista de compras
+ }
+
+
+ //Função para exibir a lista de compras 
+ function exibirLista() {
+    console.log("Lista de compras:");
+
+    //Itera sobre cada categoria e exibe os itens 
+    for (var categoria in listaDeCompras) {
+        if (listaDeCompras[categoria].length > 0) {
+                consolo.log('\t${listaDeCompras[categoria].join(", ")}');
+        }
+    }
+ }
+
+ // Chama a função para adicionar itens à lista de compras
+ adicionarItem();
+ 

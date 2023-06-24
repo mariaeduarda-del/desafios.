@@ -1,0 +1,84 @@
+// Importante: Execute este código no ambiente Node.js ou em um navegador com suporte ao recurso prompt()
+
+// Função para exibir uma mensagem e obter a escolha do usuário
+function obterEscolha(mensagem) {
+  return prompt(mensagem);
+}
+
+// Área de Front-End
+function areaFrontEnd() {
+  var escolha = obterEscolha("Você está na área de Front-End. Deseja aprender React ou Vue?");
+
+  if (escolha === "React") {
+    console.log("Você escolheu aprender React.");
+  } else if (escolha === "Vue") {
+    console.log("Você escolheu aprender Vue.");
+  } else {
+    console.log("Opção inválida.");
+    return; // Encerra a função se a escolha for inválida
+  }
+
+  escolhaEspecializacao();
+}
+
+// Área de Back-End
+function areaBackEnd() {
+  var escolha = obterEscolha("Você está na área de Back-End. Deseja aprender C# ou Java?");
+
+  if (escolha === "C#") {
+    console.log("Você escolheu aprender C#.");
+  } else if (escolha === "Java") {
+    console.log("Você escolheu aprender Java.");
+  } else {
+    console.log("Opção inválida.");
+    return; // Encerra a função se a escolha for inválida
+  }
+
+  escolhaEspecializacao();
+}
+
+// Função para verificar a escolha de especialização ou desenvolvimento fullstack
+function escolhaEspecializacao() {
+  var escolha = obterEscolha("Deseja se especializar na área escolhida ou se desenvolver como Fullstack?");
+
+  if (escolha === "especializar") {
+    console.log("Você escolheu se especializar.");
+    escolhaTecnologias();
+  } else if (escolha === "Fullstack") {
+    console.log("Você escolheu se desenvolver como Fullstack.");
+    escolhaTecnologias();
+  } else {
+    console.log("Opção inválida.");
+    return; // Encerra a função se a escolha for inválida
+  }
+}
+
+// Função para obter as tecnologias desejadas
+function escolhaTecnologias() {
+  var tecnologias = [];
+
+  while (true) {
+    var tecnologia = obterEscolha("Qual tecnologia você gostaria de aprender? (Digite 'ok' para encerrar)");
+
+    if (tecnologia.toLowerCase() === "ok") {
+      break; // Encerra o loop se o usuário digitar "ok"
+    }
+
+    tecnologias.push(tecnologia);
+    console.log("Você inseriu: " + tecnologia);
+  }
+
+  console.log("Tecnologias escolhidas: " + tecnologias.join(", "));
+}
+
+// Função principal do jogo
+function jogo() {
+  var escolha = obterEscolha("Você está no início do jogo. Deseja seguir para a área de Front-End ou Back-End?");
+}
+  if (escolha === "Front-End") {
+    areaFrontEnd();
+  } else if (escolha === "Back-End") {
+    areaBackEnd();
+  } else {
+    console.log("Opção")
+  }
